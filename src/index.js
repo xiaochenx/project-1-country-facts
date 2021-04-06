@@ -2,7 +2,10 @@ const BASE_URL = "https://restcountries.eu/rest/v2";
 
 document.addEventListener("DOMContentLoaded", () => {
     getCountries()  
+   
 })
+
+
 
 function getCountries(){
     let ul = document.getElementById("country-list")
@@ -12,6 +15,7 @@ function getCountries(){
     .then(data => {
         console.log(data)
         data.map(country => {
+            console.log(country)
             ul.innerHTML += `
             <li><a href="#" data-name="${country.name}">${country.name}</a></li>
             `
