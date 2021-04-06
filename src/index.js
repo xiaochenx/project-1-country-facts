@@ -45,6 +45,7 @@ function displayCountry(e){
         <img src="${country[0].flag}" alt="Country flag" width="380" height="250">
         <h3>Capital: </h3><p>${country[0].capital}</p>
         <h4>Native Name: </h4><p>${country[0].nativeName}</p>
+        <h4>Official Language: </h4><p>${country[0].languages[0].name}</p>
         <h4>Population: </h4><p>${country[0].population}</p>
         <h4>Region: </h4><p>${country[0].region}</p>
         <h4>Currency: </h4><p>${country[0].currencies[0].name}</p>
