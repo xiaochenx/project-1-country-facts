@@ -41,7 +41,8 @@ function displayCountry(e){
     .then(country => {
         console.log(country)
         div.innerHTML = `
-        <h1>${country[0].name}</h1><img src="${country[0].flag}" alt="Country flag" width="350" height="250">
+        <h1>${country[0].name}</h1>
+        <img src="${country[0].flag}" alt="Country flag" width="380" height="250">
         <h3>Capital: </h3><p>${country[0].capital}</p>
         <h4>Native Name: </h4><p>${country[0].nativeName}</p>
         <h4>Population: </h4><p>${country[0].population}</p>
