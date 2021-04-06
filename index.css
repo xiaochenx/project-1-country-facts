@@ -3,17 +3,38 @@ body{
 }
 
 h1{
-    color: white
+    color: white;
+    margin-left: 100px;
 }
+button{
+    margin-left: 100px;
+}
+
+ul{
+    list-style-type:square;
+}
+
 li{
-    color: white
+    color: white;
+    margin-left: 100px;
+    font-size:x-large;
+    line-height:50px;
 }
+
 h4{
-    color: white
+    color: white;
+    font-size:large;
+    margin-left: 100px;
 }
+
 p{
-    color: white
+    color: #FF851B;
+    font-size:large;
+    margin-left: 100px;
+}
+img{
+    margin-left: 100px;
 }
 a{
-    color: white
+    color: white;
 }
