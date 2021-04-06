@@ -7,18 +7,30 @@ h1{
     margin-left: 100px;
 }
 button{
-    margin-left: 100px;
+        background-color: #7b38d8;
+        border-radius: 10px;
+        color: #eeeeee;
+        text-align: center;
+        font-size: 18px;
+        padding: 7px;
+        width: 300px;
+        cursor: pointer;
+        margin-left: 90px;
 }
 
 ul{
     list-style-type:square;
+    color: white;
 }
 
 li{
-    color: white;
     margin-left: 100px;
     font-size:x-large;
     line-height:50px;
+}
+
+a{
+    color: white;
 }
 
 h4{
@@ -34,7 +46,4 @@ p{
 }
 img{
     margin-left: 100px;
-}
-a{
-    color: white;
 }
