@@ -19,7 +19,7 @@ function getCountries(){
         data.map(country => {
             console.log(country)
             ul.innerHTML += `
-            <li><a href="#" data-name="${country.name}">${country.name}</a></li>
+            <li><a href="#">${country.name}</a></li>
             `
         })
         clickableLinks()
@@ -36,7 +36,7 @@ function displayCountry(e){
     let ul = document.getElementById("country-list")
     ul.innerHTML = ""
     let div = document.getElementById("show-country")
-    fetch(BASE_URL + `/name/${e.target.dataset.name}`)
+    fetch(BASE_URL + `/name/${e.target.innerText}`)
     .then(res => res.json())
     .then(country => {
         console.log(country)
