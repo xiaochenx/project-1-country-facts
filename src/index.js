@@ -1,7 +1,7 @@
 const BASE_URL = "https://restcountries.eu/rest/v2";
 
 document.addEventListener("DOMContentLoaded", () => {
-    getCountries()  
+    document.getElementById("countries").addEventListener("click",getCountries)
    
 })
 
@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
 function getCountries(){
     let ul = document.getElementById("country-list")
     ul.innerHTML = ""
+    let div = document.getElementById("show-country")
+    div.innerHTML = ""
     fetch(BASE_URL + "/all")
     .then(res => res.json())
     .then(data => {
