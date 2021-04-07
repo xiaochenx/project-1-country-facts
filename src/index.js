@@ -41,17 +41,48 @@ function getCountries(){
         data.map(country => {
             console.log(country)
             ul.innerHTML += `
-            <li><a href="#">${country.name}</a></li>
+            <li><a href="#" data-tag-type="aTag">${country.name}</a>
+            <button id = "like" data-tag-type="buttonTag" data-likes="0">Like</button>
+            </li>
             `
         })
         clickableLinks()
     })
 }
 
+
 function clickableLinks(){
     let ul = document.getElementById("country-list")
-    ul.addEventListener("click",displayCountry)
+    ul.addEventListener("click",handleClicks)
 }
+
+
+
+function handleClicks(e){
+    console.log(e.target.dataset.tagType);
+    const tagType = e.target.dataset.tagType
+    
+    if(tagType === "buttonTag"){
+        likeCountry(e)
+    }else{
+        displayCountry(e)
+    }
+}
+
+function likeCountry(e){
+    console.log(e)
+    const li = e.target.parentElement;
+    const button = e.target;
+    button.dataset.likes ++
+    if(button.dataset.likes === "1"){
+        li.innerHTML += `<p id:"likes">Liked:${e.target.dataset.likes}</p>`
+    }else{
+       li.querySelector("p").innerText = `Liked: ${button.dataset.likes}`
+    }
+    
+}
+
+
 
 function displayCountry(e){
     console.log(e)

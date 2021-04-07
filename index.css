@@ -6,7 +6,7 @@ h1{
     color: white;
     margin-left: 100px;
 }
-button{
+#countries{
         background-color: #7b38d8;
         border-radius: 10px;
         color: #eeeeee;
@@ -50,4 +50,14 @@ img{
 
 label{
     color:white;
+    font-size:large;
+}
+select{
+    font-size:medium;
+}
+
+#like{
+    background-color: white;
+    border-radius: 7px;
+    color:#001f3f;
 }
