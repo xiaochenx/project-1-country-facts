@@ -7,6 +7,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function getCountriesByContinent(e){
     console.log(e);
+    let ul = document.getElementById("country-list")
+    ul.innerHTML = ""
+    let div = document.getElementById("show-country")
+    div.innerHTML = ""
+    fetch(BASE_URL + "/all")
+    .then(res => res.json())
+    .then(data => {
+        console.log(data)
+        data.filter(country => {
+            console.log(country)
+            if(country.region === e.target.value){
+            ul.innerHTML += `
+            <li><a href="#">${country.name}</a></li>
+            `
+            }
+        })
+        clickableLinks()
+    })
+
 }
 
 
