@@ -46,7 +46,7 @@ function displayCountry(e){
         <h4>Capital: </h4><p>${country[0].capital}</p>
         <h4>Native Name: </h4><p>${country[0].nativeName}</p>
         <h4>Official Language: </h4><p>${country[0].languages[0].name}</p>
-        <h4>Population: </h4><p>${country[0].population}</p>
+        <h4>Population: </h4><p>${country[0].population.toLocaleString()}</p>
         <h4>Continent: </h4><p>${country[0].region}</p>
         <h4>Currency: </h4><p>${country[0].currencies[0].name}</p>
         `
