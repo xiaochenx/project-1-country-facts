@@ -2,9 +2,12 @@ const BASE_URL = "https://restcountries.eu/rest/v2";
 
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("countries").addEventListener("click",getCountries)
-   
+    document.getElementById("continent-dropdown").addEventListener("change",getCountriesByContinent)
 })
 
+function getCountriesByContinent(e){
+    console.log(e);
+}
 
 
 function getCountries(){
