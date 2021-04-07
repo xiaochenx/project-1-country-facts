@@ -19,7 +19,9 @@ function getCountriesByContinent(e){
             console.log(country)
             if(country.region === e.target.value){
             ul.innerHTML += `
-            <li><a href="#">${country.name}</a></li>
+            <li><a href="#">${country.name}</a>
+            <button id = "like" data-tag-type="buttonTag" data-likes="0">Like</button>
+            </li>
             `
             }
         })
@@ -75,7 +77,7 @@ function likeCountry(e){
     const button = e.target;
     button.dataset.likes ++
     if(button.dataset.likes === "1"){
-        li.innerHTML += `<p id:"likes">Liked:${e.target.dataset.likes}</p>`
+        li.innerHTML += `<p id:"likes">Liked:${button.dataset.likes}</p>`
     }else{
        li.querySelector("p").innerText = `Liked: ${button.dataset.likes}`
     }
