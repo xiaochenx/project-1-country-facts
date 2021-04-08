@@ -12,7 +12,7 @@ Open your terminal/CLI, and git clone the repo to your prefered folder.
 
 Step 3:
 click "show me every country on 🌍" button, to render a list of every country on the page.
-or you can choose in the drop down menu to show a list of countries filtered by their continent.  
+or you can choose in the drop down menu to filter countries by their continent.  
 
 With either method, you will have a list of country names and a like button rendered on the page.
 You can click on their names to see more details, such as population, language, national flag,etc.
