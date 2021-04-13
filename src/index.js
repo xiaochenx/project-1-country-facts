@@ -3,7 +3,20 @@ const BASE_URL = "https://restcountries.eu/rest/v2";
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("countries").addEventListener("click",getCountries)
     document.getElementById("continent-dropdown").addEventListener("change",getCountriesByContinent)
+    document.querySelector("h1").addEventListener("click", reverseText)
 })
+
+function reverseText(e){
+    console.log(e)
+    const splitH1 = e.target.innerText.split("")
+    // console.log(splitH1)
+    const reverseH1 = splitH1.reverse()
+    // console.log(reverseH1)
+    const joinArry = reverseH1.join("")
+    console.log(joinArry)
+    let h1 = document.querySelector("h1")
+    h1.innerText = `${joinArry}`
+}
 
 function getCountriesByContinent(e){
     console.log(e);
@@ -41,7 +54,7 @@ function getCountries(){
     .then(data => {
         console.log(data)
         data.map(country => {
-            console.log(country)
+            // console.log(country)
             ul.innerHTML += `
             <li><a href="#" data-tag-type="aTag">${country.name}</a>
             <button id = "like" data-tag-type="buttonTag" data-likes="0">Like</button>
@@ -108,4 +121,14 @@ function displayCountry(e){
     })
 }
 
+// step 1: comment challenge
+// when header is clicked, text is reversed
 
+//request: click on header
+// response: header text reverses
+
+//step 2: break challenge up into steps
+
+// selected h1 tag
+// add an event listener to h1 tag
+// write callback function that flips the h1 tag
